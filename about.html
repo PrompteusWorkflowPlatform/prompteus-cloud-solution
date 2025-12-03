@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompteus · About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">Prompteus</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Solution</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="docs.html">Docs</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">About Prompteus</h1>
+    <p class="page-subtitle">
+      Pioneering the future of human + AI interaction through reliable orchestration.
+    </p>
+
+    <section class="section">
+      <h2>Who We Are</h2>
+      <p>
+        Prompteus is a platform designed to make AI adoption easy, governable, and sustainable.
+        We help teams move from experiments and ad-hoc prompts to structured, repeatable,
+        and fully governed AI workflows.
+      </p>
+      <p>
+        Our mission is to bridge the gap between powerful foundation models and the real-world
+        systems, teams, and processes that depend on them—without vendor lock-in or black-box behavior.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What We Believe</h2>
+      <ul>
+        <li>AI should be transparent, controllable, and aligned with how people actually work.</li>
+        <li>Enterprises need both experimentation and governance, not one or the other.</li>
+        <li>Human judgment remains essential—AI should amplify it, not replace it.</li>
+        <li>Open, flexible, multi-model architectures win in the long run.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>If you are interested in pilots, partnerships, or deeper integrations:</p>
+      <ul>
+        <li>Email: <a href="mailto:baptiste@prompteus.org">baptiste@prompteus.org</a></li>
+        <li>Website: <a href="https://prompteus.org" target="_blank">https://prompteus.org</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="icon">🌗</span><span>Toggle theme</span>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Prompteus</span>
+      <span>Human + AI · Orchestration</span>
+    </div>
+  </footer>
+
+  <script>
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      if (current === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
+</body>
+</html>
