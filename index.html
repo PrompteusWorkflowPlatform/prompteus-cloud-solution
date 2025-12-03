@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompteus · Solution</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">Prompteus</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Solution</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="docs.html">Docs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">AI Orchestration & Multi-LLM Workflows</h1>
+    <p class="page-subtitle">
+      Prompteus makes AI adoption simple, reliable, and compliant for modern teams on Google Cloud.
+    </p>
+
+    <section class="section">
+      <h2>Solution Overview</h2>
+      <p>
+        Prompteus is a full-stack AI orchestration platform that enables teams to design, automate,
+        and govern complex multi-LLM workflows with confidence. Built on Google Cloud, the platform
+        connects structured logic, human-in-the-loop decisions, and model flexibility with enterprise-grade
+        security and compliance.
+      </p>
+      <p>
+        By integrating with Vertex AI, Cloud Run, BigQuery, and IAM, Prompteus standardizes how AI is
+        used across products and operations—ensuring consistent outputs, auditable decisions, and
+        cost-efficient execution at scale.
+      </p>
+      <div class="badge-row">
+        <span class="badge">Vertex AI</span>
+        <span class="badge">Cloud Run</span>
+        <span class="badge">BigQuery</span>
+        <span class="badge">IAM & SSO</span>
+        <span class="badge">Multi-LLM Routing</span>
+        <span class="badge">Human-in-the-Loop</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Key Capabilities</h2>
+      <ul>
+        <li>Design and orchestrate end-to-end AI workflows with branching, validations, and reusable templates.</li>
+        <li>Route requests across multiple LLMs and SLMs for optimal cost, latency, or accuracy.</li>
+        <li>Keep humans in the loop for review, approvals, and exception handling.</li>
+        <li>Run repeatable flows for document processing, knowledge retrieval, classification, and summarization.</li>
+        <li>Enforce security, access control, and auditability across high-stakes environments.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Who This Is For</h2>
+      <p>Prompteus is ideal for organizations that need both flexibility and governance:</p>
+      <ul>
+        <li>Software & internet companies scaling AI across products and teams.</li>
+        <li>Financial services and healthcare organizations operating in regulated environments.</li>
+        <li>Professional services firms building knowledge-centric AI assistants.</li>
+        <li>Public sector and enterprises requiring traceable, explainable AI workflows.</li>
+      </ul>
+      <a href="https://prompteus.org" target="_blank" class="button">Visit Prompteus Website</a>
+    </section>
+  </main>
+
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="icon">🌗</span><span>Toggle theme</span>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Prompteus</span>
+      <span>Built for Google Cloud · Vertex AI · Cloud Run · BigQuery</span>
+    </div>
+  </footer>
+
+  <script>
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      if (current === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
+</body>
+</html>
