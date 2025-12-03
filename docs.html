@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompteus · Docs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">Prompteus</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Solution</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="docs.html" class="active">Docs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Documentation</h1>
+    <p class="page-subtitle">
+      Quick start and integration notes for using Prompteus with Google Cloud.
+    </p>
+
+    <section class="section">
+      <h2>Quick Start</h2>
+      <ol class="doc-list">
+        <li>Connect Prompteus to your Google Cloud project.</li>
+        <li>Configure IAM roles for Vertex AI, Cloud Run, and BigQuery.</li>
+        <li>Create your first workflow in the Prompteus UI.</li>
+        <li>Add tasks that call Vertex AI models for summarization, classification, or Q&A.</li>
+        <li>Publish the workflow and invite teams to run it.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Example: Vertex AI Integration</h2>
+      <p>Below is a simplified pseudo-flow of how Prompteus calls Vertex AI within a workflow:</p>
+      <div class="code-block">
+        <pre>
+1. Receive request from Prompteus workflow
+2. Build prompt with context, user input, and system rules
+3. Call Vertex AI text model endpoint
+4. Validate and post-process the response
+5. Route result to the next step (human review, storage, or another model)
+        </pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Logging & Observability</h2>
+      <ul>
+        <li>Workflow executions can be logged into BigQuery for analysis.</li>
+        <li>Create dashboards to track model usage, latency, and failure rates.</li>
+        <li>Export audit logs for compliance and reporting purposes.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Learn More</h2>
+      <p>
+        For deeper technical documentation, configuration guides, or SDK references,
+        visit:
+      </p>
+      <a href="https://prompteus.org" target="_blank" class="button">Go to Prompteus Docs</a>
+    </section>
+  </main>
+
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="icon">🌗</span><span>Toggle theme</span>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Prompteus</span>
+      <span>Docs · Google Cloud Integration</span>
+    </div>
+  </footer>
+
+  <script>
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      if (current === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
+</body>
+</html>
