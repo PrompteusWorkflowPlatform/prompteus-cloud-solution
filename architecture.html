@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompteus · Architecture</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">Prompteus</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Solution</a>
+        <a href="architecture.html" class="active">Architecture</a>
+        <a href="docs.html">Docs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Architecture on Google Cloud</h1>
+    <p class="page-subtitle">
+      How Prompteus connects Vertex AI, Cloud Run, BigQuery, and IAM to deliver reliable AI workflows.
+    </p>
+
+    <section class="section">
+      <h2>High-Level Architecture</h2>
+      <p>
+        Prompteus acts as the orchestration layer between end users, AI models, and enterprise systems.
+        The platform combines a visual workflow builder, an orchestration engine, and deep integrations
+        with Google Cloud:
+      </p>
+      <ul>
+        <li><strong>Prompteus UI</strong> – builders design workflows, prompts, and human-in-the-loop steps.</li>
+        <li><strong>Orchestration Engine</strong> – executes logic, routes prompts, and coordinates tools and APIs.</li>
+        <li><strong>Vertex AI</strong> – hosts LLMs, SLMs, and evaluation models used in workflows.</li>
+        <li><strong>Cloud Run</strong> – runs stateless services for pre/post-processing and integrations.</li>
+        <li><strong>BigQuery</strong> – stores logs, metrics, embeddings, and analytics data.</li>
+        <li><strong>IAM & SSO</strong> – secures access and enforces organization-wide policies.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Diagram</h2>
+      <p>The diagram below illustrates how the components interact within a typical deployment:</p>
+      <div class="diagram">
+        <img src="architecture-diagram.svg" alt="Prompteus Architecture Diagram" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Deployment Considerations</h2>
+      <ul>
+        <li>Deploy Prompteus alongside your existing Google Cloud infrastructure.</li>
+        <li>Use separate projects or namespaces for dev, staging, and production.</li>
+        <li>Leverage IAM roles to restrict access to models, data, and workflows.</li>
+        <li>Stream logs and metrics into BigQuery for analysis and compliance.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="icon">🌗</span><span>Toggle theme</span>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Prompteus</span>
+      <span>Architecture · Google Cloud</span>
+    </div>
+  </footer>
+
+  <script>
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      if (current === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
+</body>
+</html>
