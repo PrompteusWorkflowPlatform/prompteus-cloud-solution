@@ -1,0 +1,33 @@
+<svg width="1080" height="620" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="1080" height="620" fill="#F7F9FB"/>
+
+  <rect x="320" y="40" width="440" height="90" rx="12" fill="#FFFFFF" stroke="#3A6FF7" stroke-width="2"/>
+  <text x="540" y="95" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    Prompteus UI (Workflow Builder + HIL)
+  </text>
+
+  <rect x="320" y="160" width="440" height="90" rx="12" fill="#FFFFFF" stroke="#6B66E9" stroke-width="2"/>
+  <text x="540" y="215" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    Orchestration Engine (Logic + Routing)
+  </text>
+
+  <rect x="80" y="300" width="300" height="90" rx="12" fill="#FFFFFF" stroke="#3A6FF7" stroke-width="2"/>
+  <text x="230" y="355" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    Vertex AI (LLMs & Eval)
+  </text>
+
+  <rect x="400" y="300" width="300" height="90" rx="12" fill="#FFFFFF" stroke="#6B66E9" stroke-width="2"/>
+  <text x="550" y="355" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    Cloud Run (Execution)
+  </text>
+
+  <rect x="720" y="300" width="300" height="90" rx="12" fill="#FFFFFF" stroke="#F6A23A" stroke-width="2"/>
+  <text x="870" y="355" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    BigQuery (Logs & Analytics)
+  </text>
+
+  <rect x="400" y="460" width="300" height="90" rx="12" fill="#FFFFFF" stroke="#8D93A1" stroke-width="2"/>
+  <text x="550" y="515" font-size="20" font-family="Inter, system-ui" text-anchor="middle" fill="#2A2D34">
+    IAM / SSO / Governance
+  </text>
+</svg>
