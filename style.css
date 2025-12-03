@@ -1,0 +1,283 @@
+/* =============================
+   Prompteus Multi-Page Site
+   Light + Dark Theme
+   Premium SaaS UI
+============================= */
+
+/* Default: Light Theme */
+:root {
+  --bg: #FFFFFF;
+  --surface: #F7F9FB;
+  --panel: #F2F5F8;
+  --divider: #E3E6EB;
+
+  --text: #2A2D34;
+  --text-secondary: #5A5F69;
+  --text-muted: #8D93A1;
+
+  --primary: #3A6FF7;
+  --secondary: #6B66E9;
+  --accent: #F6A23A;
+
+  --radius: 12px;
+  --shadow: 0 8px 18px rgba(0,0,0,0.05);
+  --transition: 0.25s ease;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #0D1117;
+  --surface: #161B22;
+  --panel: #1D232C;
+  --divider: #2D333B;
+
+  --text: #F2F4F6;
+  --text-secondary: #9EA7B3;
+  --text-muted: #7B8593;
+
+  --primary: #4C8BFF;
+  --secondary: #8E84FF;
+  --accent: #F6B25A;
+
+  --shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* Top Navigation */
+
+.top-nav {
+  width: 100%;
+  border-bottom: 1px solid var(--divider);
+  background: var(--surface);
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-links a:hover {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.nav-links a.active {
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+/* Theme Toggle */
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--panel);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  z-index: 50;
+}
+
+.theme-toggle span.icon {
+  font-size: 15px;
+}
+
+/* Layout */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 48px 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.section {
+  background: var(--panel);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.section ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--divider);
+}
+
+/* Buttons */
+
+.button {
+  background: var(--primary);
+  padding: 11px 18px;
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.button:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+/* Code / Docs */
+
+.code-block {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 13px;
+  color: var(--text-secondary);
+  overflow-x: auto;
+  border: 1px solid var(--divider);
+}
+
+.doc-list {
+  list-style-type: disc;
+  padding-left: 18px;
+}
+
+.doc-list li {
+  margin-bottom: 6px;
+}
+
+/* Architecture Image */
+
+.diagram {
+  margin-top: 12px;
+}
+
+.diagram img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--divider);
+}
+
+/* Footer */
+
+.footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 24px 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--divider);
+}
+.footer-inner {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 720px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
